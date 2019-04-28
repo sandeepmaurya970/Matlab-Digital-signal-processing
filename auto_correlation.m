@@ -1,0 +1,13 @@
+clc; clear all; close all;
+x=input('enter the first sequence');
+y=xcorr(x,x);
+figure; subplot(2,1,1);
+stem(x); ylabel('amplitude-->');
+xlabel('(a)n-->');
+title('First Sequence');
+subplot(2,1,2);
+stem(fliplr(y));
+ylabel ('amplitude-->');
+xlabel ('(b) n-->');
+title('the resulted signal after auto correlation');
+fliplr(y);

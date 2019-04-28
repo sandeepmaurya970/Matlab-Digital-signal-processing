@@ -1,0 +1,17 @@
+clc; clear all; close all;
+x=input('enter the first sequence');
+h=input('enter the second sequence');
+y=xcorr(x,h);
+figure; subplot(3,1,1);
+stem(x); ylabel('amplitude-->');
+xlabel('(a)n-->');
+title('First srquence');
+subplot(3,1,2);
+stem(h);ylabel ('amplitude-->');
+xlabel ('(b) n-->');
+title('Second Sequence');
+subplot(3,1,3);
+stem(y); ylabel ('amplitude-->');
+xlabel ('(c) n-->');
+title('The resulted signal after correlation ');
+fliplr(y);
